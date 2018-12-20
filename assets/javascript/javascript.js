@@ -19,21 +19,21 @@ $(document).ready(function () {
             question: "What is the name of the summer camp in the Friday the 13th movie series?",
             choices: ["Camp Ruby Lake", "Camp Emerald Lake", "Camp Lake Lake", "Camp Crystal Lake"],
             answer: 3,
-            image: "assets/images/camp.jpeg"
+            image: "assets/images/camp.jpg"
         },
 
         {
             question: "Which artist's song was the 10 billionth iTunes download",
             choices: ["Drake", "Johnny Cash", "Jay-Z", "Lady Gaga"],
             answer: 1,
-            image: "assets/images/jhonny.gif"
+            image: "assets/images/johnny.gif"
         },
 
         {
             question: "What country does the cappuccino originate from?",
             choices: ["Britain", "France", "Italy", "Spain"],
             answer: 2,
-            image: "assets/images/italy.jpeg"
+            image: "assets/images/italy.jpg"
         }];
 
     var timer = 25;
@@ -130,7 +130,7 @@ $(document).ready(function () {
     })
 
     function hidepicture() {
-        $("#answers").append("<img src=" + pick.photo + ">");
+        $("#answers").append("<img src=" + pick.image + ">");
         newArray.push(pick);
         questionsNAnswers.splice(index, 1);
 
