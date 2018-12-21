@@ -127,6 +127,7 @@ $(document).ready(function () {
                 hidepicture();
             }
         })
+        
     
 
     function hidepicture() {
@@ -134,7 +135,7 @@ $(document).ready(function () {
         newArray.push(pick);
         questionsNAnswers.splice(index, 1);
 
-        var hidepic = setTimeout(function () {
+        var hidePicture = setTimeout(function () {
             $("#answers").empty();
             timer = 25;
 
@@ -146,6 +147,7 @@ $(document).ready(function () {
                 $("#answers").append("<h4> Incorrect: " + wrong + "</h4>");
                 $("#answers").append("<h4> Unanswered: " + unanswered + "</h4>");
                 $("#reset").show();
+
                 correct = 0;
                 wrong = 0;
                 unanswered = 0;
