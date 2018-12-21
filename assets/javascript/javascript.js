@@ -127,16 +127,16 @@ $(document).ready(function () {
                 hidepicture();
             }
         })
-    })
+    
 
     function hidepicture() {
         $("#answers").append("<img src=" + pick.image + ">");
         newArray.push(pick);
         questionsNAnswers.splice(index, 1);
 
-        var hidpic = setTimeout(function () {
+        var hidepic = setTimeout(function () {
             $("#answers").empty();
-            timer = 5;
+            timer = 25;
 
             //run the score screen if all questions answered
             if ((wrong + correct + unanswered) === questionCount) {
@@ -155,7 +155,8 @@ $(document).ready(function () {
                 displayQuestion();
 
             }
-        }, 3000);
+            // fixes images not working and gives the time for image displayed
+        }, 5000);
 
 
     }
@@ -172,4 +173,4 @@ $(document).ready(function () {
 
     })
 
-});
+})});
